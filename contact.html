@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Book your luxury safari tour in Sri Lanka. Contact us to reserve your wildlife adventure in Yala, Wilpattu, or Udawalawe National Parks.">
+    <meta name="keywords" content="book safari, safari booking, contact safari tours, reserve safari">
+    <title>Book Your Safari | Safari Luxe - Contact & Booking</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <style>
+        .demo-notice {
+            background: linear-gradient(135deg, #d4af37, #e8d5a3);
+            color: #000;
+            padding: 1rem;
+            text-align: center;
+            font-weight: 600;
+            margin-bottom: 2rem;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header & Navigation -->
+    <header>
+        <nav>
+            <div class="logo">SAFARI LUXE</div>
+            <button class="menu-toggle" aria-label="Toggle menu">☰</button>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="packages.html">Packages</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="contact.html" class="active">Book Now</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Contact Hero -->
+    <section class="hero" style="min-height: 300px;">
+        <img src="https://images.pexels.com/photos/2901209/pexels-photo-2901209.jpeg?auto=compress&cs=tinysrgb&w=1920" alt="Book Your Safari" class="hero-image">
+        <div class="hero-content">
+            <h1>Book Your Safari</h1>
+            <p>Reserve your luxury wildlife adventure today</p>
+        </div>
+    </section>
+
+    <!-- Contact Form Section -->
+    <section class="contact-section">
+        <div class="container">
+            <div class="contact-container">
+                <div class="section-title">
+                    <h2>Booking Form</h2>
+                    <p>Fill out the form below to reserve your safari experience. We'll confirm your booking within 24 hours.</p>
+                </div>
+
+                <div class="demo-notice">
+                    📋 This is a demo HTML version. For full functionality with form processing, use contact.php with a PHP server.
+                </div>
+
+                <form class="contact-form" id="bookingForm">
+                    <!-- Full Name -->
+                    <div class="form-group">
+                        <label for="name">Full Name <span style="color: #d32f2f;">*</span></label>
+                        <input 
+                            type="text" 
+                            id="name" 
+                            name="name" 
+                            required
+                            placeholder="Enter your full name"
+                        >
+                        <span class="error-message" id="name-error"></span>
+                    </div>
+
+                    <!-- Email -->
+                    <div class="form-group">
+                        <label for="email">Email Address <span style="color: #d32f2f;">*</span></label>
+                        <input 
+                            type="email" 
+                            id="email" 
+                            name="email" 
+                            required
+                            placeholder="your.email@example.com"
+                        >
+                        <span class="error-message" id="email-error"></span>
+                    </div>
+
+                    <!-- Phone -->
+                    <div class="form-group">
+                        <label for="phone">Phone Number <span style="color: #d32f2f;">*</span></label>
+                        <input 
+                            type="tel" 
+                            id="phone" 
+                            name="phone" 
+                            required
+                            placeholder="+94 77 123 4567"
+                        >
+                        <span class="error-message" id="phone-error"></span>
+                    </div>
+
+                    <!-- Safari Package -->
+                    <div class="form-group">
+                        <label for="package">Safari Package <span style="color: #d32f2f;">*</span></label>
+                        <select id="package" name="package" required>
+                            <option value="">-- Select a Package --</option>
+                            <option value="yala">Yala Premium Safari - $299</option>
+                            <option value="wilpattu">Wilpattu Adventure - $279</option>
+                            <option value="udawalawe">Udawalawe Elephant Safari - $249</option>
+                            <option value="yala-morning">Yala Morning Safari - $199</option>
+                            <option value="wilpattu-full">Wilpattu Full Day Experience - $349</option>
+                            <option value="udawalawe-full">Udawalawe Full Day Safari - $299</option>
+                        </select>
+                        <span class="error-message" id="package-error"></span>
+                    </div>
+
+                    <!-- Preferred Date -->
+                    <div class="form-group">
+                        <label for="date">Preferred Date <span style="color: #d32f2f;">*</span></label>
+                        <input 
+                            type="date" 
+                            id="date" 
+                            name="date" 
+                            required
+                            min=""
+                        >
+                        <span class="error-message" id="date-error"></span>
+                    </div>
+
+                    <!-- Number of Guests -->
+                    <div class="form-group">
+                        <label for="guests">Number of Guests <span style="color: #d32f2f;">*</span></label>
+                        <input 
+                            type="number" 
+                            id="guests" 
+                            name="guests" 
+                            required
+                            min="1" 
+                            max="20"
+                            placeholder="1-20"
+                        >
+                        <span class="error-message" id="guests-error"></span>
+                    </div>
+
+                    <!-- Message -->
+                    <div class="form-group">
+                        <label for="message">Additional Message (Optional)</label>
+                        <textarea 
+                            id="message" 
+                            name="message" 
+                            rows="5"
+                            placeholder="Any special requests or questions..."
+                            maxlength="1000"
+                        ></textarea>
+                        <span class="error-message" id="message-error"></span>
+                    </div>
+
+                    <!-- Submit Button -->
+                    <button type="submit" class="btn btn-primary" style="width: 100%; font-size: 1.1rem; padding: 1.25rem;">
+                        Submit Booking Request
+                    </button>
+                </form>
+
+                <!-- Success Message (hidden by default) -->
+                <div class="success-message" id="successMessage" style="display: none;">
+                    <h3>✓ Booking Request Submitted!</h3>
+                    <p>Thank you for your booking request. For full functionality, please use contact.php with a PHP server.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>SAFARI LUXE</h3>
+                    <p>Premium safari tours in Sri Lanka. Experience wildlife like never before with our luxury safari packages.</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <a href="index.html">Home</a>
+                    <a href="about.html">About Us</a>
+                    <a href="packages.html">Safari Packages</a>
+                    <a href="gallery.html">Gallery</a>
+                    <a href="contact.html">Book Now</a>
+                </div>
+                <div class="footer-section">
+                    <h3>Contact Us</h3>
+                    <p>
+                        <svg class="social-icon" style="width: 16px; height: 16px; display: inline; vertical-align: middle; margin-right: 8px;" viewBox="0 0 24 24">
+                            <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
+                        </svg>
+                        Colombo, Sri Lanka
+                    </p>
+                    <p>
+                        <svg class="social-icon" style="width: 16px; height: 16px; display: inline; vertical-align: middle; margin-right: 8px;" viewBox="0 0 24 24">
+                            <path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/>
+                        </svg>
+                        +94 77 123 4567
+                    </p>
+                    <p>
+                        <svg class="social-icon" style="width: 16px; height: 16px; display: inline; vertical-align: middle; margin-right: 8px;" viewBox="0 0 24 24">
+                            <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
+                        </svg>
+                        info@safariluxe.lk
+                    </p>
+                </div>
+                <div class="footer-section">
+                    <h3>Follow Us</h3>
+                    <div class="social-icons">
+                        <a href="#" aria-label="Facebook">
+                            <svg class="social-icon" viewBox="0 0 24 24">
+                                <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/>
+                            </svg>
+                        </a>
+                        <a href="#" aria-label="Instagram">
+                            <svg class="social-icon" viewBox="0 0 24 24">
+                                <rect x="2" y="2" width="20" height="20" rx="5" ry="5" fill="none" stroke="currentColor" stroke-width="2"/>
+                                <path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z" fill="none" stroke="currentColor" stroke-width="2"/>
+                                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5" stroke="currentColor" stroke-width="2"/>
+                            </svg>
+                        </a>
+                        <a href="#" aria-label="Twitter">
+                            <svg class="social-icon" viewBox="0 0 24 24">
+                                <path d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Safari Luxe. All rights reserved. | Academic Web Application Development Project</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Mobile Menu Script -->
+    <script>
+        const menuToggle = document.querySelector('.menu-toggle');
+        const navLinks = document.querySelector('.nav-links');
+
+        menuToggle.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+        });
+
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                navLinks.classList.remove('active');
+            });
+        });
+
+        // Set minimum date to tomorrow
+        const dateInput = document.getElementById('date');
+        const tomorrow = new Date();
+        tomorrow.setDate(tomorrow.getDate() + 1);
+        dateInput.min = tomorrow.toISOString().split('T')[0];
+
+        // Get package from URL parameter
+        const urlParams = new URLSearchParams(window.location.search);
+        const packageParam = urlParams.get('package');
+        if (packageParam) {
+            const packageSelect = document.getElementById('package');
+            packageSelect.value = packageParam;
+        }
+
+        // Form validation and submission
+        const form = document.getElementById('bookingForm');
+        const successMessage = document.getElementById('successMessage');
+
+        form.addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Clear previous errors
+            document.querySelectorAll('.form-group').forEach(group => {
+                group.classList.remove('error');
+            });
+            document.querySelectorAll('.error-message').forEach(msg => {
+                msg.style.display = 'none';
+            });
+
+            let isValid = true;
+            const formData = new FormData(form);
+
+            // Validate name
+            const name = formData.get('name').trim();
+            if (!name || name.length < 2) {
+                showError('name', 'Full name is required and must be at least 2 characters.');
+                isValid = false;
+            }
+
+            // Validate email
+            const email = formData.get('email').trim();
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!email || !emailRegex.test(email)) {
+                showError('email', 'Please enter a valid email address.');
+                isValid = false;
+            }
+
+            // Validate phone
+            const phone = formData.get('phone').trim();
+            if (!phone || phone.length < 10) {
+                showError('phone', 'Phone number is required and must be at least 10 digits.');
+                isValid = false;
+            }
+
+            // Validate package
+            const package = formData.get('package');
+            if (!package) {
+                showError('package', 'Please select a safari package.');
+                isValid = false;
+            }
+
+            // Validate date
+            const date = formData.get('date');
+            if (!date) {
+                showError('date', 'Please select a preferred date.');
+                isValid = false;
+            } else {
+                const selectedDate = new Date(date);
+                const today = new Date();
+                today.setHours(0, 0, 0, 0);
+                if (selectedDate < today) {
+                    showError('date', 'Please select a future date.');
+                    isValid = false;
+                }
+            }
+
+            // Validate guests
+            const guests = parseInt(formData.get('guests'));
+            if (!guests || guests < 1 || guests > 20) {
+                showError('guests', 'Number of guests must be between 1 and 20.');
+                isValid = false;
+            }
+
+            if (isValid) {
+                // Show success message
+                form.style.display = 'none';
+                successMessage.style.display = 'block';
+                successMessage.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                
+                // In a real application, you would submit to a server here
+                console.log('Form data:', {
+                    name: name,
+                    email: email,
+                    phone: phone,
+                    package: package,
+                    date: date,
+                    guests: guests,
+                    message: formData.get('message')
+                });
+            }
+        });
+
+        function showError(fieldName, message) {
+            const field = document.getElementById(fieldName);
+            const formGroup = field.closest('.form-group');
+            const errorElement = document.getElementById(fieldName + '-error');
+            
+            formGroup.classList.add('error');
+            errorElement.textContent = message;
+            errorElement.style.display = 'block';
+        }
+    </script>
+</body>
+</html>
+
